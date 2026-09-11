@@ -1,0 +1,53 @@
+name: ScanLens
+options:
+  bundleIdPrefix: com.nerdsnipe
+  deploymentTarget:
+    iOS: "18.0"
+packages:
+  # DesignFoundationPro is a private, licensed package (github.com/NerdSnipe-Inc/DesignFoundationPro),
+  # and that's the intentional gate: the source here is meant to be read and learned from by anyone,
+  # but SwiftPM can only resolve this dependency — and the project only builds — for someone whose
+  # GitHub account has been granted access to that private repo. Everyone else gets a clean
+  # "repository not found" from SwiftPM rather than a build that silently can't work.
+  DesignFoundationPro:
+    url: https://github.com/NerdSnipe-Inc/DesignFoundationPro.git
+    from: 2.1.1
+  DesignFoundation:
+    url: https://github.com/NerdSnipe-Inc/design-foundation.git
+    from: 1.5.0
+targets:
+  ScanLens:
+    type: application
+    platform: iOS
+    sources:
+      - ScanLens
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.nerdsnipe.scanlens
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        SWIFT_VERSION: "6.0"
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: QW2MDLZZJH
+        TARGETED_DEVICE_FAMILY: "1,2"
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: ScanLens
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        INFOPLIST_KEY_UISupportedInterfaceOrientations~ipad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        INFOPLIST_KEY_NSPhotoLibraryUsageDescription: "ScanLens needs photo access to import a document or receipt to scan."
+    dependencies:
+      - package: DesignFoundation
+      - package: DesignFoundationPro
+  ScanLensTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - ScanLensTests
+    settings:
+      base:
+        SWIFT_VERSION: "6.0"
+        GENERATE_INFOPLIST_FILE: YES
+    dependencies:
+      - target: ScanLens
