@@ -1,5 +1,4 @@
 import SwiftUI
-import UIKit
 
 /// Renders a few plain sample "documents" on the fly (grocery receipt, parking receipt, meeting
 /// note) so the OCR → AI extraction pipeline is fully demoable without needing to seed the
@@ -78,6 +77,6 @@ enum SampleDocumentImageFactory {
 
         let renderer = ImageRenderer(content: content)
         renderer.scale = 2
-        return renderer.uiImage?.cgImage
+        return renderer.cgImage
     }
 }

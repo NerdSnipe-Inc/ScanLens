@@ -1,6 +1,7 @@
 import SwiftUI
 import SwiftData
 import PhotosUI
+import ImageIO
 import DesignFoundation
 
 struct ImportView: View {
@@ -97,8 +98,8 @@ struct ImportView: View {
         do {
             guard
                 let data = try await item.loadTransferable(type: Data.self),
-                let uiImage = UIImage(data: data),
-                let cgImage = uiImage.cgImage
+                let imageSource = CGImageSourceCreateWithData(data as CFData, nil),
+                let cgImage = CGImageSourceCreateImageAtIndex(imageSource, 0, nil)
             else {
                 errorMessage = "Couldn't read that photo."
                 return
@@ -124,7 +125,7 @@ struct ImportView: View {
             var category = DocumentCategory.other
             var summary = ""
 
-            if #available(iOS 26.0, *) {
+            if #available(iOS 26.0, macOS 26.0, *) {
                 stage = .extracting
                 let engine = DocumentExtractionEngine()
                 if engine.isAvailable {
