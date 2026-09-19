@@ -13,7 +13,7 @@ family of full-source example apps as [BudgetLens](https://github.com/NerdSnipe-
 [ClientLens](https://github.com/NerdSnipe-Inc/ClientLens), [BookLens](https://github.com/NerdSnipe-Inc/BookLens),
 and [AICompleteChat](https://github.com/NerdSnipe-Inc/AICompleteChat), all built on
 [DesignFoundation](https://github.com/NerdSnipe-Inc/design-foundation) /
-[DesignFoundation Pro](https://github.com/NerdSnipe-Inc/DesignFoundationPro).
+[DesignFoundation Pro](https://nerdsnipe.cc/design-foundation-pro).
 
 The pipeline: import a photo (or try a bundled sample) → on-device Vision (`VNRecognizeTextRequest`)
 reads the text → on-device Apple Intelligence (`LanguageModelSession` + `@Generable`) titles,
