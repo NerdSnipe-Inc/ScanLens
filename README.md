@@ -18,7 +18,7 @@ and [AICompleteChat](https://github.com/NerdSnipe-Inc/AICompleteChat), all built
 The pipeline: import a photo (or try a bundled sample) → on-device Vision (`VNRecognizeTextRequest`)
 reads the text → on-device Apple Intelligence (`LanguageModelSession` + `@Generable`) titles,
 categorizes, and summarizes it → the result is saved and browsable in a folder/tag workspace
-assembled from [DesignFoundation Pro's `Documents` UI kit](https://github.com/NerdSnipe-Inc/DesignFoundationPro).
+assembled from [DesignFoundation Pro's `Documents` UI kit](https://nerdsnipe.cc/design-foundation-pro).
 No server round-trip, no API key, no cloud OCR or LLM cost.
 
 Looking for a real-world **[SwiftUI OCR app example](https://github.com/NerdSnipe-Inc/ScanLens)**,
