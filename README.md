@@ -31,8 +31,8 @@ on both iOS and macOS? This is a full app, not a snippet.
 - [**DesignFoundation**](https://github.com/NerdSnipe-Inc/design-foundation) — the free,
   open-source [SwiftUI design system](https://github.com/NerdSnipe-Inc/design-foundation) behind
   every button, text field, and theme in this app.
-- [**DesignFoundation Pro**](https://github.com/NerdSnipe-Inc/DesignFoundationPro) — the premium
-  [SwiftUI Documents UI kit](https://github.com/NerdSnipe-Inc/DesignFoundationPro) (folder
+- [**DesignFoundation Pro**](https://nerdsnipe.cc/design-foundation-pro) — the premium
+  [SwiftUI Documents UI kit](https://nerdsnipe.cc/design-foundation-pro) (folder
   sidebar, tag system, note list, and editor) ScanLens's Documents tab is assembled from.
 - **Apple Vision** — on-device OCR via `VNRecognizeTextRequest`.
 - **Apple Foundation Models** — on-device [Apple Intelligence](https://github.com/NerdSnipe-Inc/ScanLens)
@@ -82,7 +82,7 @@ needed in app code.
 - Xcode 26+
 - [xcodegen](https://github.com/yonaskolb/XcodeGen) (`brew install xcodegen`) — this repo has no
   committed `.xcodeproj`; regenerate it from `project.yml`
-- **A [DesignFoundationPro](https://github.com/NerdSnipe-Inc/DesignFoundationPro) license.** This
+- **A [DesignFoundationPro](https://nerdsnipe.cc/design-foundation-pro) license.** This
   is the one intentional gate: the source here is meant to be read and learned from by anyone,
   but it only actually *builds* for someone with access to DesignFoundationPro, since the
   Documents tab is assembled from its `Documents` vertical rather than built from scratch.
@@ -96,7 +96,7 @@ needed in app code.
   ```
   That's expected, not a bug in this repo: it means your GitHub account isn't on
   DesignFoundationPro's access list. [Grab a
-  license](https://github.com/NerdSnipe-Inc/DesignFoundationPro) to fix it.
+  license](https://nerdsnipe.cc/design-foundation-pro) to fix it.
 
 [DesignFoundation](https://github.com/NerdSnipe-Inc/design-foundation) (the free design-system
 core) is public and resolves automatically via Swift Package Manager.
@@ -158,7 +158,7 @@ automatically.
 
 - [DesignFoundation](https://github.com/NerdSnipe-Inc/design-foundation) — the free SwiftUI
   design system this app (and its UI) is built on.
-- [DesignFoundation Pro](https://github.com/NerdSnipe-Inc/DesignFoundationPro) — the premium
+- [DesignFoundation Pro](https://nerdsnipe.cc/design-foundation-pro) — the premium
   vertical UI kits (Documents, Analytics, AI Chat, CRM, and more) ScanLens's Documents tab uses.
 - [BudgetLens](https://github.com/NerdSnipe-Inc/BudgetLens) — the sibling full-source example
   app: an on-device AI personal budget tracker, universal across iOS and macOS, built the same way.
